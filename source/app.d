@@ -1,6 +1,9 @@
 import std.stdio;
 import std.algorithm;
 
+const uint BOARD_SIZE = 9;
+const uint THIR_SIZE= 3;
+
 struct coord {
     uint i = 0;
     uint j = 0;
