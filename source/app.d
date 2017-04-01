@@ -29,12 +29,17 @@ class SudokuCell {
 }
 
 
+const auto LINE = "\n-------------------------";
+
 /**
  *
  */
 class SudokuBoard {
     SudokuCell[BOARD_SIZE][BOARD_SIZE] cells;
 
+    /**
+     *
+     */
     this()
     {
         int i;
@@ -46,6 +51,30 @@ class SudokuBoard {
             }());
         }());
     }
+
+    /**
+     *
+     */
+    void print ()
+    {
+        stdout.writeln(LINE);
+        cells.each!((i, row) => {
+            stdout.writef("|");
+            row.each!((j, cell) => {
+                stdout.writef(" %d", cell.value);
+
+                if(j % 3 == 2) {
+                    stdout.writef(" |");
+                }
+            }());
+
+            if(i % 3 == 2) {
+                stdout.writeln(LINE);
+            } else {
+                stdout.writeln("");
+            }
+        }());
+    }
 }
 
 
@@ -55,5 +84,5 @@ class SudokuBoard {
 void main()
 {
     auto board = new SudokuBoard();
-    stdout.writeln(board.cells);
+    board.print();
 }
