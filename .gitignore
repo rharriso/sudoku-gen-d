@@ -19,6 +19,13 @@
 docs.json
 __dummy.html
 docs/
+*.o
+*.obj
+__test__*__
 
 # Code coverage
 *.lst
+
+
+out
+sudokugenerator

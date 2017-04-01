@@ -1,0 +1,9 @@
+{
+	"name": "sudokugenerator",
+	"authors": [
+		"Ross Harrison"
+	],
+	"description": "A minimal D application.",
+	"copyright": "Copyright © 2017, Ross Harrison",
+	"license": "proprietary"
+}
